@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Signup Form Project - HTML & CSS" />
+  <meta name="description" content="Signup Form Project - HTML, CSS & JS" />
   <title>Signup Form</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -16,15 +17,17 @@
 
   <main>
     <section class="signup-form-section">
-      <form action="#" method="post" class="signup-form">
+      <form id="signupForm" class="signup-form" novalidate>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Create a password" required />
+        <small id="passwordHelp" class="help-text"></small>
 
         <label for="confirm-password">Confirm Password</label>
         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required />
+        <small id="matchHelp" class="help-text"></small>
 
         <label for="dob">Date of Birth</label>
         <input type="date" id="dob" name="dob" required />
@@ -42,6 +45,7 @@
         </label>
 
         <button type="submit">Sign Up</button>
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
       </form>
     </section>
   </main>
@@ -49,5 +53,7 @@
   <footer>
     <p>&copy; 2025 SignupForm Inc. | <a href="#">Privacy Policy</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
